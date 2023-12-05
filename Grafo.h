@@ -22,7 +22,7 @@ struct ruta{
     float kilometros; // distancia/coste total de la ruta
 
     //constructor del struct
-    ruta(string origen, string destino) :
+    ruta(string origenR, string destinoR) :
             origen(origen),
             destino(destino),
             numCiudades(),
@@ -33,15 +33,15 @@ struct ruta{
 class Grafo {
     int N; // numero de vertices
     string Cjtovertices[MAX]; // vector que contiene el conjunto de vertices
-    float MatAdyacencia[MAX][MAX]; //fila(i) = origen, columna(j) = destino
-    float MatFloyd [MAX][MAX];
-    int MatP [MAX][MAX];
-    int matPrioridad[MAX][MAX];
-    float matCaminosMin[MAX][MAX];
+    float MatAdyacencia[MAX][MAX]{}; //fila(i) = origen, columna(j) = destino
+    float MatFloyd [MAX][MAX]{};
+    int MatP [MAX][MAX]{};
+    int matPrioridad[MAX][MAX]{};
+    float matCaminosMin[MAX][MAX]{};
     int preguntas; // cantidad de preguntas a leer
     vector<ruta>rutasGrafo; // vector de struct ruta
     int cantidadPrioridades; // cantidad de prioridades
-    int matArreglados[MAX][MAX]; // matriz de caminos arreglados
+    int matArreglados[MAX][MAX]{}; // matriz de caminos arreglados
 
 
 public:
@@ -62,10 +62,10 @@ public:
      */
     int getCantidadPrioridades();
 
-    /*PRE: string origen, destino y int i deben ser leidos correctamente
+    /*PRE: string origen, destino deben ser leidos correctamente
      *POST: modifican los valores origen y destino de la ruta i del vector rutasGrafo del grafo
      */
-    void setRutaGrafo(string origen, string destino, int i);
+    void setRutaGrafo(string origenR, string destinoR);
 
     /*PRE: int prio debe ser leido correctamente
      *POST: inicializa el numero de preguntas sobre los caminos minimos

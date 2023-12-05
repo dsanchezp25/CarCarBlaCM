@@ -1,6 +1,7 @@
 #include "Grafo.h"
 #include <cfloat>
 
+
 Grafo::Grafo(){
     N = 0;
     preguntas = 0;
@@ -18,8 +19,8 @@ Grafo::Grafo(){
 
 }
 
-void Grafo::setRutaGrafo(string origen, string destino, int i) {
-    ruta nuevaRuta(origen, destino);
+void Grafo::setRutaGrafo(string origenR, string destinoR) {
+    ruta nuevaRuta(origenR, destinoR);
     rutasGrafo.push_back(nuevaRuta);
 }
 
