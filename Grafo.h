@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include <string>
-#include <stdio.h>
+#include <cstdio>
 #include <vector>
 using namespace std;
 
